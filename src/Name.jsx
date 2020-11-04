@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Name = (props) => {
+const Name = (props) => {  
   const { name:firstName, email, address: {street, city} } = props;
   return (
     <div>
