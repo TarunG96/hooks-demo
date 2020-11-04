@@ -1,8 +1,8 @@
 import React from 'react';
+import Name from './Name';
 
 const Counter = (props) => {
   const [count, setCount] = React.useState(5);
-  const { name } = props
 
   const handleChange = (type) => {
     if(type === 'dec'){
@@ -10,14 +10,30 @@ const Counter = (props) => {
     }else{
       setCount(count + 1)
     }
-
   }
+
+  const employees = [
+    {
+      name: 'Tarun',
+      lname: 'Garg'
+    },
+    {
+      name: 'Lalit',
+      lname: 'Kumar'
+    },
+    {
+      name: 'Sahil',
+      lname: 'Jha'
+    }
+  ]
 
   return (
     <div>
       The count is: {count}
       <br/>
-      <p>Hello {name}</p>
+      {employees.map((emp, i) =>
+        <Name {...emp} key = {i} />
+      )}
       <button onClick = {() => handleChange('inc')} >Increase</button>
       <button onClick = {() => handleChange('dec')} >Decrease</button>
     </div>
