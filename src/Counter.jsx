@@ -15,15 +15,25 @@ const Counter = (props) => {
   const employees = [
     {
       name: 'Tarun',
-      lname: 'Garg'
+      lname: 'Garg',
+      address: {
+        street: '2540',
+        city: 'Ballabgarh',
+        localities: {
+          name: 'sec-2'
+        }
+      }
     },
     {
       name: 'Lalit',
-      lname: 'Kumar'
-    },
-    {
-      name: 'Sahil',
-      lname: 'Jha'
+      lname: 'Kumar',
+      address: {
+        street: '2343',
+        city: 'Faridabad',
+        localities: {
+          name: 'NIT 5'
+        }
+      }
     }
   ]
 
