@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Name = (props) => {  
-  const { name:firstName, lname:lastName, address: {street, city, localities: {name}} } = props;
+const Name = (props) => {
+  const { name:firstName, email, address: {street, city} } = props;
   return (
     <div>
-      {`Hello ${firstName} ${lastName}, Your address is ${street} ${city} ${name}`}
+      {`Hello ${firstName} ${email}, Your address is ${street} ${city}`}
     </div>
   );
 }
